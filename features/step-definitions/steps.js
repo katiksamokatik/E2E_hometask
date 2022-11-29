@@ -8,9 +8,7 @@ When("I close the promo banner", async () => {
     const promo = await $('.modal-body .modal-Website-img');
     try {
         await promo.waitForDisplayed({ timeout: 3000 });
-            if(promo.isDisplayed()) {
-                await $('.modal-content .close').click()
-            }
+        await $('.modal-content .close').click()
     }
     catch (error) {
         console.log("No pop-up")

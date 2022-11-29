@@ -4,7 +4,6 @@ Background:
 Given I am on the home page
 When I close the promo banner
 
-
 Scenario: Search bar
 Given I enter Windows in the search bar
 When I click the search button
