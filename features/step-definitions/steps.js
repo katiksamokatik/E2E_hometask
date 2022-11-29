@@ -7,7 +7,7 @@ Given("I am on the home page", async () => {
 When("I close the promo banner", async () => {
     const promo = await $('.modal-body .modal-Website-img');
     try {
-        await promo.waitForDisplayed(5000);
+        await promo.waitForDisplayed({ timeout: 3000 });
             if(promo.isDisplayed()) {
                 await $('.modal-content .close').click()
             }
