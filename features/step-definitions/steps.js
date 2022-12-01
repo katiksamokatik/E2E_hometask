@@ -7,7 +7,7 @@ Given("User is on the home page", async () => {
 When("User closes the promo banner", async () => {
     const promo = await $('.modal-body .modal-Website-img');
     try {
-        await promo.waitForDisplayed({ timeout: 3000 });
+        await promo.waitForDisplayed();
         await $('.modal-content .close').click()
     }
     catch (error) {
@@ -16,8 +16,8 @@ When("User closes the promo banner", async () => {
 })
 
 Given ("User enters {word} in the search bar", async (query) => {
-    const input = await $('input[type="search"]');
-    await input.setValue(query);
+    const searchField = await $('input[type="search"]');
+    await searchField.setValue(query);
 })
 
 When ("User clicks the search button", async () => {
